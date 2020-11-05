@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "/service";
+
+message SearchRequest {
+  string movieId = 1;
+  string cityId = 2;
+  int32 page_number = 3;
+  int32 result_per_page = 4;
+}
+
+message SearchResponse {
+  repeated string cinemaIds = 1;
+}
+
+service SearchService {
+  rpc Search(SearchRequest) returns (SearchResponse);
+}
