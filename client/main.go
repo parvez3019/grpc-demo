@@ -27,7 +27,7 @@ func elapsed(what string) func() {
 	}
 }
 
-func createClient(clientNumber int, wg *sync.WaitGroup) {
+func createClient(clientId int, wg *sync.WaitGroup) {
 	defer wg.Done()
 	var conn *grpc.ClientConn
 	conn, err := grpc.Dial(":8080", grpc.WithInsecure())
@@ -47,7 +47,7 @@ func createClient(clientNumber int, wg *sync.WaitGroup) {
 		if err != nil {
 			log.Fatal(err)
 		}
-		log.Printf("Response from server: %s, client %d", response, clientNumber)
+		log.Printf("Response from server: %s for client %d", response, clientId)
 	}
 
 }
