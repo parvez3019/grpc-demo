@@ -36,11 +36,12 @@ func createClient(clientId int, wg *sync.WaitGroup) {
 	}
 	defer conn.Close()
 	c := api.NewSearchServiceClient(conn)
-	for i := 1; i < 100; i++ {
+	var i int32
+	for  i = 1; i < 100; i++ {
 		request := api.SearchRequest{
 			MovieId:       "Avengers",
 			CityId:        "Delhi",
-			PageNumber:    int32(i),
+			PageNumber:    i,
 			ResultPerPage: 10,
 		}
 		response, err := c.Search(context.Background(), &request)
