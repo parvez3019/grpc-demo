@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="51273a77-160d-4d90-bfef-83e3baf11d5c" name="Default Changelist" comment="" />
+    <list default="true" id="51273a77-160d-4d90-bfef-83e3baf11d5c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc/api/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/api/handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc/client/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/client/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/readMe.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/api/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/rest/api/handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/client/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/rest/client/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/server/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/rest/server/main.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +29,9 @@
     </option>
   </component>
   <component name="GOROOT" path="/usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
@@ -39,19 +52,29 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/grpc" />
       <recent name="$PROJECT_DIR$/server" />
       <recent name="$PROJECT_DIR$/service" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/proto" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build main.go">
+  <component name="RunManager" selected="Go Build.go build grpc-basics/rest/server">
     <configuration name="go build grpc-basics" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="grpc-basics" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
       <filePath value="$PROJECT_DIR$/main.go" />
       <package value="grpc-basics" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build grpc-basics/rest/server" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="grpc-basics" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/rest/server/main.go" />
+      <package value="grpc-basics/rest/server" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
@@ -66,6 +89,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build grpc-basics/rest/server" />
         <item itemvalue="Go Build.go build main.go" />
         <item itemvalue="Go Build.go build grpc-basics" />
       </list>
@@ -95,7 +119,9 @@
       <updated>1604584080828</updated>
       <workItem from="1604584084434" duration="1187000" />
       <workItem from="1604586474222" duration="3504000" />
-      <workItem from="1604596158477" duration="4093000" />
+      <workItem from="1604596158477" duration="4585000" />
+      <workItem from="1604778542902" duration="843000" />
+      <workItem from="1604826844589" duration="3432000" />
     </task>
     <servers />
   </component>
@@ -111,21 +137,25 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="545" y="336" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1604586449642" />
-    <state width="798" height="261" key="GridCell.Tab.0.bottom" timestamp="1604598265970">
+    <state width="1638" height="261" key="GridCell.Tab.0.bottom" timestamp="1604828220742">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="798" height="261" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1604598265970" />
-    <state width="798" height="261" key="GridCell.Tab.0.center" timestamp="1604598265969">
+    <state width="1638" height="261" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1604828220742" />
+    <state width="1638" height="261" key="GridCell.Tab.0.center" timestamp="1604828220741">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="798" height="261" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1604598265969" />
-    <state width="798" height="261" key="GridCell.Tab.0.left" timestamp="1604598265969">
+    <state width="1638" height="261" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1604828220741" />
+    <state width="1638" height="261" key="GridCell.Tab.0.left" timestamp="1604828220741">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="798" height="261" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1604598265969" />
-    <state width="798" height="261" key="GridCell.Tab.0.right" timestamp="1604598265970">
+    <state width="1638" height="261" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1604828220741" />
+    <state width="1638" height="261" key="GridCell.Tab.0.right" timestamp="1604828220742">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="798" height="261" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1604598265970" />
+    <state width="1638" height="261" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1604828220742" />
+    <state x="505" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1604827601548">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="505" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1604827601548" />
   </component>
 </project>

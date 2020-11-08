@@ -8,22 +8,45 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"sync"
+	"time"
 )
 
 func main() {
-	get()
+	defer elapsed("page")()
+	var wg sync.WaitGroup
+	for i :=0 ; i < 100; i++ {
+		wg.Add(1)
+		go get(i, &wg)
+	}
+	wg.Wait()
 }
 
-func get() {
-	fmt.Println("Get")
+func elapsed(what string) func() {
+	start := time.Now()
+	return func() {
+		fmt.Printf("%s took %v\n", what, time.Since(start))
+	}
+}
+
+
+func get(clientId int, wg *sync.WaitGroup) {
+	defer wg.Done()
+	var i int32
+	for  i = 1; i < 500; i++ {
+		makeARequest(i, clientId)
+	}
+}
+
+func makeARequest(pageNumber int32, id int) {
 	searchRequest := api.Request{
-		MovieId:        "",
-		CityId:         "",
-		PageNumber:     0,
-		ResultsPerPage: 0,
+		MovieId:        "Avengers",
+		CityId:         "Delhi",
+		PageNumber:     pageNumber,
+		ResultsPerPage: 10,
 	}
 	jsonReq, err := json.Marshal(searchRequest)
-	req, err := http.NewRequest(http.MethodGet, "localhost:8080/searchMovies", bytes.NewBuffer(jsonReq))
+	req, err := http.NewRequest(http.MethodGet, "http://localhost:8080/searchMovies", bytes.NewBuffer(jsonReq))
 	req.Header.Set("Content-Type", "application/json; charset=utf-8")
 	client := &http.Client{}
 	resp, err := client.Do(req)
@@ -34,12 +57,7 @@ func get() {
 	defer resp.Body.Close()
 	bodyBytes, _ := ioutil.ReadAll(resp.Body)
 
-	// Convert response body to string
-	bodyString := string(bodyBytes)
-	fmt.Println(bodyString)
-
-	// Convert response body to Todo struct
 	var searchResponse api.Response
 	json.Unmarshal(bodyBytes, &searchResponse)
-	fmt.Printf("API Response as struct:\n%+v\n", searchResponse)
+	fmt.Printf("API Response as struct: %+v from Client %d \n" , searchResponse, id)
 }

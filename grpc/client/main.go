@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 	"google.golang.org/grpc"
-	"grpc-basics/api"
+	api2 "grpc-basics/grpc/api"
 	"log"
 	"sync"
 	"time"
@@ -35,10 +35,10 @@ func createClient(clientId int, wg *sync.WaitGroup) {
 		log.Fatal(err)
 	}
 	defer conn.Close()
-	c := api.NewSearchServiceClient(conn)
+	c := api2.NewSearchServiceClient(conn)
 	var i int32
-	for  i = 1; i < 100; i++ {
-		request := api.SearchRequest{
+	for  i = 1; i < 500; i++ {
+		request := api2.SearchRequest{
 			MovieId:       "Avengers",
 			CityId:        "Delhi",
 			PageNumber:    i,
