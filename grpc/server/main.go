@@ -2,7 +2,7 @@ package main
 
 import (
 	"google.golang.org/grpc"
-	"grpc-basics/api"
+	"grpc-basics/grpc/api"
 	"log"
 	"net"
 )
@@ -13,7 +13,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	s := api.Server{}
+	s := api.Handler{}
 
 	grpcServer := grpc.NewServer()
 	api.RegisterSearchServiceServer(grpcServer, &s)
@@ -21,4 +21,5 @@ func main() {
 	if err = grpcServer.Serve(lis); err != nil {
 		log.Fatal(err)
 	}
+	log.Println("Listening on localhost:8080")
 }
