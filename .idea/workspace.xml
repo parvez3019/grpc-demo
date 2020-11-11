@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="51273a77-160d-4d90-bfef-83e3baf11d5c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc/client/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/client/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc/server/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/server/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/readMe.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +126,7 @@
       <workItem from="1604778542902" duration="843000" />
       <workItem from="1604826844589" duration="3552000" />
       <workItem from="1605038313075" duration="516000" />
-      <workItem from="1605077871713" duration="375000" />
+      <workItem from="1605077871713" duration="968000" />
     </task>
     <servers />
   </component>
