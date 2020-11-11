@@ -30,7 +30,7 @@ func elapsed(what string) func() {
 func createClient(clientId int, wg *sync.WaitGroup) {
 	defer wg.Done()
 	var conn *grpc.ClientConn
-	conn, err := grpc.Dial(":8080", grpc.WithInsecure())
+	conn, err := grpc.Dial(":8081", grpc.WithInsecure())
 	if err != nil {
 		log.Fatal(err)
 	}
